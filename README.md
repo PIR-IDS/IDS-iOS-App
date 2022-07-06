@@ -89,6 +89,9 @@ This code will be used in order to receive the anomalies detected by the Arduino
    mint run xcodegen generate 
    ```
 4. Open the `.xcodeproj` directory in Xcode
+   ```sh
+   open idsapp.xcodeproj
+   ```
 
 
 <!-- USAGE EXAMPLES -->
