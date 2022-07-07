@@ -57,14 +57,152 @@ struct TopBar: ToolbarContent {
 
 struct TextTabs: View {
     @State private var selectionIndex = TabItem.services
+    var body: some View {
+        Tabs(selectionIndex: $selectionIndex)
+        TabsContent(selectionIndex: $selectionIndex)
+    }
+}
+
+struct Tabs: View {
+    let selectionIndex: Binding<TabItem>
     
     var body: some View {
-        Picker("Menu", selection: $selectionIndex) {
-            Text("My Services").tag(TabItem.services)
-            Text("My Probes").tag(TabItem.devices)
-            Text("My Network").tag(TabItem.network)
+        Picker("Menu", selection: selectionIndex) {
+            Text(TabItem.services.title).tag(TabItem.services)
+            Text(TabItem.devices.title).tag(TabItem.devices)
+            Text(TabItem.network.title).tag(TabItem.network)
         }
         .padding()
         .pickerStyle(SegmentedPickerStyle())
+    }
+}
+
+struct TabsContent: View {
+    let selectionIndex: Binding<TabItem>
+    
+    var body: some View {
+        switch selectionIndex.wrappedValue {
+        case .services: ServicesScreen()
+        case .devices: DevicesScreen()
+        case .network: NetworkScreen()
+        }
+    }
+}
+
+struct ServicesScreen: View {
+    var body: some View {
+        VStack(alignment: .center) {
+            VStack {
+                TabItem.services.icon
+                    .font(.system(size: 30))
+                    .padding(.bottom, -2)
+                    .padding(.top, -10)
+                Text("My Services".uppercased())
+                    .font(.title)
+                    .bold()
+                    .multilineTextAlignment(.center)
+            }
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100, maximum: 100))]) {
+                ForEach(Array(Service.connectedServices), id: \.self) { item in
+                    Button {
+                        
+                    } label : {
+                        Image("ids_logo_flat")
+                            .resizable()
+                            .scaledToFit()
+                            .padding(10)
+                            .clipShape(Circle())
+                    }
+                }
+                Button {
+                    
+                } label : {
+                    Image(systemName: "plus.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(10)
+                        .clipShape(Circle())
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .center)
+        }
+        .frame(maxWidth: .infinity, alignment: .center)
+    }
+}
+
+struct ServicesScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        ServicesScreen()
+    }
+}
+
+struct DevicesScreen: View {
+    var body: some View {
+        VStack(alignment: .center) {
+            VStack {
+                TabItem.devices.icon
+                    .font(.system(size: 30))
+                    .padding(.bottom, 2)
+                    .padding(.top, -10)
+                Text("My Devices".uppercased())
+                    .font(.title)
+                    .bold()
+                    .multilineTextAlignment(.center)
+            }
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100, maximum: 100))]) {
+                ForEach(Array(Device.knownDevices), id: \.self) { item in
+                    Button {
+                        
+                    } label : {
+                        Image("ids_logo_flat")
+                            .resizable()
+                            .scaledToFit()
+                            .padding(10)
+                            .clipShape(Circle())
+                    }
+                }
+                Button {
+                    
+                } label : {
+                    Image(systemName: "plus.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(10)
+                        .clipShape(Circle())
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .center)
+        }
+        .frame(maxWidth: .infinity, alignment: .center)
+    }
+}
+
+struct DevicesScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        DevicesScreen()
+    }
+}
+
+struct NetworkScreen: View {
+    var body: some View {
+        VStack(alignment: .center) {
+            VStack {
+                TabItem.network.icon
+                    .font(.system(size: 30))
+                    .padding(.bottom, 2)
+                    .padding(.top, -10)
+                Text("My Network".uppercased())
+                    .font(.title)
+                    .bold()
+                    .multilineTextAlignment(.center)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .center)
+    }
+}
+
+struct NetworkScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        NetworkScreen()
     }
 }
