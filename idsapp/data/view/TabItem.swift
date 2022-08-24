@@ -15,9 +15,9 @@ enum TabItem {
     
     var value: (Image, String) {
         switch self {
-        case .services: return (icon: Image(systemName: "building.columns"), title: "My Services")
-        case .devices: return (icon: Image(systemName: "ipad.and.iphone"), title: "My Devices")
-        case .network: return (icon: Image(systemName: "dot.radiowaves.left.and.right"), title: "My Network")
+        case .services: return (icon: Image(systemName: "building.columns"), title: String(localized: "tab_text_services"))
+        case .devices: return (icon: Image(systemName: "ipad.and.iphone"), title: String(localized: "tab_text_devices"))
+        case .network: return (icon: Image(systemName: "dot.radiowaves.left.and.right"), title: String(localized: "tab_text_network"))
         }
     }
 }

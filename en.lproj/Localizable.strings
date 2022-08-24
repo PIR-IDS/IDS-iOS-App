@@ -1,0 +1,69 @@
+/* 
+  Localizable.strings
+  idsapp
+
+  Created by rmonier on 24/08/2022.
+  
+*/
+
+"menu" = "Menu";
+
+"app_name" = "IDS App";
+"alert_notify" = "IDS detected an intrusion!";
+"tab_text_services" = "My Services";
+"tab_text_devices" = "My Probes";
+"tab_text_network" = "My Network";
+"izly_description" = "Izly by Crous is the payment service of Crous. Izly by Crous allows students to pay for Crous services on their campus.";
+"add_service" = "Add a Service";
+"add_device" = "Add a Probe";
+"settings" = "Settings";
+"notifications" = "Notifications";
+"username" = "Username";
+"password" = "Password";
+"login" = "Login";
+"not_found" = "Not Found!";
+"history" = "History";
+"linked_probes" = "Linked Probes";
+"wallet_card_desc" = "wallet desc";
+"close" = "Close";
+"service_not_connected" = "Error: we are unable to connect you to the service!";
+"connected" = "Service connected!";
+"service_disconnected" = "Service unavailable!";
+"reconnect" = "Disconnect from the service";
+"no_history" = "Empty History";
+"no_devices" = "No Linked Probes";
+"scanned_devices" = "Scanning for Probes…";
+"device_connected" = "New Probe connected successfully!";
+"device_connection_failed" = "Failed to connect to Probe!";
+"go_back" = "Go back";
+"general" = "General";
+"full_screen_alert" = "Full screen alert";
+"full_screen_alert_explanation" = "Full screen notification when intrusion";
+"theme" = "Theme";
+"about" = "About";
+"version" = "Version";
+"developers" = "Developers";
+"delete" = "Delete";
+"wallet_intrusion" = "Wallet intrusion!";
+"suspicious_transaction" = "Suspicious transaction:";
+"wallet_data" = "Wallet data";
+"wallet_event_message" = "Wallet out at:";
+"probe_name" = "Probe name";
+"probe_address" = "Probe address";
+"data_history" = "DATA HISTORY";
+"location" = "Location";
+"more_details" = "More Details";
+"is_connected" = "Connected";
+"not_connected" = "Not connected";
+"service_monitored" = "Service monitored";
+"service_not_monitored" = "Service not monitored";
+"important_ids_channel_description" = "Important IDS Channel";
+"detection_removed" = "Detection removed!";
+"no_detection" = "You are safe";
+"delete_title" = "Delete all detected intrusions?";
+"delete_message" = "This will be irreversible.";
+"confirm" = "Confirm";
+"cancel" = "Cancel";
+"no_compatible_services" = "No other compatible service found!";
+"show_details" = "Show Details";
+"dismiss" = "Dismiss";

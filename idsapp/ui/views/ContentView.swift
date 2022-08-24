@@ -14,7 +14,7 @@ struct ContentView: View {
                 TextTabs()
                 Spacer()
             }
-            .navigationBarTitle("IDS App")
+            .navigationBarTitle("app_name")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 TopBar()
@@ -67,7 +67,7 @@ struct Tabs: View {
     let selectionIndex: Binding<TabItem>
     
     var body: some View {
-        Picker("Menu", selection: selectionIndex) {
+        Picker("menu", selection: selectionIndex) {
             Text(TabItem.services.title).tag(TabItem.services)
             Text(TabItem.devices.title).tag(TabItem.devices)
             Text(TabItem.network.title).tag(TabItem.network)
@@ -97,7 +97,7 @@ struct ServicesScreen: View {
                     .font(.system(size: 30))
                     .padding(.bottom, -2)
                     .padding(.top, -10)
-                Text("My Services".uppercased())
+                Text(String(localized: "tab_text_services").uppercased())
                     .font(.title)
                     .bold()
                     .multilineTextAlignment(.center)
@@ -149,7 +149,7 @@ struct DevicesScreen: View {
                     .font(.system(size: 30))
                     .padding(.bottom, 2)
                     .padding(.top, -10)
-                Text("My Devices".uppercased())
+                Text(String(localized: "tab_text_devices").uppercased())
                     .font(.title)
                     .bold()
                     .multilineTextAlignment(.center)
@@ -201,7 +201,7 @@ struct NetworkScreen: View {
                     .font(.system(size: 30))
                     .padding(.bottom, 2)
                     .padding(.top, -10)
-                Text("My Network".uppercased())
+                Text(String(localized: "tab_text_network").uppercased())
                     .font(.title)
                     .bold()
                     .multilineTextAlignment(.center)

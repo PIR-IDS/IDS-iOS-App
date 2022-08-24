@@ -1,0 +1,69 @@
+/* 
+  Localizable.strings
+  idsapp
+
+  Created by rmonier on 24/08/2022.
+  
+*/
+
+"menu" = "Menu";
+
+"app_name" = "IDS App";
+"alert_notify" = "L'IDS a détecté une intrusion !";
+"tab_text_services" = "Mes Services";
+"tab_text_devices" = "Mes Sondes";
+"tab_text_network" = "Mon Réseau";
+"izly_description" = "Izly by Crous est le service de paiement des Crous. Izly by Crous permet aux étudiants de payer les services du Crous sur leur campus.";
+"add_service" = "Ajouter un Service";
+"add_device" = "Ajouter une Sonde";
+"settings" = "Paramètres";
+"notifications" = "Notifications";
+"username" = "Identifiant";
+"password" = "Mot de passe";
+"login" = "Connexion";
+"not_found" = "Introuvable !";
+"history" = "Historique";
+"linked_probes" = "Sondes Liées";
+"wallet_card_desc" = "wallet desc";
+"close" = "Fermer";
+"service_not_connected" = "Erreur : nous ne pouvons pas vous connecter au service !";
+"connected" = "Service connecté !";
+"service_disconnected" = "Service non accessible !";
+"reconnect" = "Se déconnecter du service";
+"no_history" = "Historique vide";
+"no_devices" = "Pas de Sondes Liées";
+"scanned_devices" = "Scan des Sondes…";
+"device_connected" = "Nouvelle sonde connectée avec succès !";
+"device_connection_failed" = "Échec de la connexion à la sonde !";
+"go_back" = "Précédent";
+"general" = "Général";
+"full_screen_alert" = "Alerte plein écran";
+"about" = "À Propos";
+"version" = "Version";
+"developers" = "Développeurs";
+"delete" = "Supprimer";
+"wallet_intrusion" = "Intrusion Porte-feuille !";
+"suspicious_transaction" = "Transaction suspecte :";
+"wallet_data" = "Données du Porte-feuille";
+"wallet_event_message" = "Porte-feuille sorti à :";
+"full_screen_alert_explanation" = "Notification plein écran lors d'une intrusion";
+"theme" = "Thème";
+"probe_name" = "Nom de la sonde";
+"probe_address" = "Adresse de la sondée";
+"data_history" = "HISTORIQUE DES DONNÉES";
+"location" = "Localisation";
+"more_details" = "Plus de détails";
+"is_connected" = "Connecté";
+"not_connected" = "Non connecté";
+"service_monitored" = "Service monitoré";
+"service_not_monitored" = "Service non monitoré";
+"important_ids_channel_description" = "Canal prioritaire IDS";
+"detection_removed" = "Détection supprimée !";
+"no_detection" = "Vous êtes en sécurité";
+"delete_title" = "Supprimer toutes les détections d'intrusion ?";
+"delete_message" = "Cette action sera irréversible.";
+"confirm" = "Confirmer";
+"cancel" = "Annuler";
+"no_compatible_services" = "Pas d'autres services compatibles disponibles !";
+"show_details" = "Afficher";
+"dismiss" = "Ignorer";
