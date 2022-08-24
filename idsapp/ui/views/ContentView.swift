@@ -102,7 +102,10 @@ struct ServicesScreen: View {
                     .bold()
                     .multilineTextAlignment(.center)
             }
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100, maximum: 100))]) {
+            LazyVGrid(
+                columns: [GridItem(.adaptive(minimum: 150, maximum: 150))],
+                alignment: .center
+            ) {
                 ForEach(Array(Service.connectedServices), id: \.self) { item in
                     Button {
                         
@@ -110,7 +113,7 @@ struct ServicesScreen: View {
                         Image("ids_logo_flat")
                             .resizable()
                             .scaledToFit()
-                            .padding(10)
+                            .padding(25)
                             .clipShape(Circle())
                     }
                 }
@@ -120,10 +123,12 @@ struct ServicesScreen: View {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
                         .scaledToFit()
-                        .padding(10)
+                        .padding(25)
                         .clipShape(Circle())
+                        .opacity(0.8)
                 }
             }
+            .padding(.horizontal, 20)
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .frame(maxWidth: .infinity, alignment: .center)
@@ -149,7 +154,10 @@ struct DevicesScreen: View {
                     .bold()
                     .multilineTextAlignment(.center)
             }
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100, maximum: 100))]) {
+            LazyVGrid(
+                columns: [GridItem(.adaptive(minimum: 150, maximum: 150))],
+                alignment: .center
+            ) {
                 ForEach(Array(Device.knownDevices), id: \.self) { item in
                     Button {
                         
@@ -157,7 +165,7 @@ struct DevicesScreen: View {
                         Image("ids_logo_flat")
                             .resizable()
                             .scaledToFit()
-                            .padding(10)
+                            .padding(25)
                             .clipShape(Circle())
                     }
                 }
@@ -167,10 +175,12 @@ struct DevicesScreen: View {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
                         .scaledToFit()
-                        .padding(10)
+                        .padding(25)
                         .clipShape(Circle())
+                        .opacity(0.8)
                 }
             }
+            .padding(.horizontal, 20)
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .frame(maxWidth: .infinity, alignment: .center)
@@ -195,6 +205,13 @@ struct NetworkScreen: View {
                     .font(.title)
                     .bold()
                     .multilineTextAlignment(.center)
+            }
+            ZStack(alignment: .center) {
+                Image(systemName: "antenna.radiowaves.left.and.right.slash")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(80)
+                    .opacity(0.3)
             }
         }
         .frame(maxWidth: .infinity, alignment: .center)
