@@ -97,11 +97,19 @@ This code will be used in order to receive the anomalies detected by the Arduino
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### Execution
-
-_TODO_
-
 ### Generation
+
+To get the Debug `IDS App.app` file in the `build/Debug-iphoneos/` directory, use the following command:
+```sh
+xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Debug -target idsapp
+```
+
+To get the Release `IDS App.app` file in the `build/Release-iphoneos/` directory, use the following command:
+```sh
+xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Release -target idsapp
+```
+
+### Execution
 
 _TODO_
 
