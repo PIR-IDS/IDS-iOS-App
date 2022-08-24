@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import idsapp
+@testable import IDS_App
 
 class idsappTests: XCTestCase {
 
