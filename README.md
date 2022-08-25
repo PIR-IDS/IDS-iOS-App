@@ -90,7 +90,7 @@ This code will be used in order to receive the anomalies detected by the Arduino
    ```
 3. Generate the `.xcodeproj` directory by typing the following command while being in the project root:
    ```sh
-   mint run xcodegen generate 
+   mint run xcodegen generate
    ```
 4. Open the `.xcodeproj` directory in Xcode
    ```sh

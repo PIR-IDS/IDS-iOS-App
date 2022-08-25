@@ -1,0 +1,33 @@
+name: Test with xcodebuild
+
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  test:
+
+    runs-on: macos-12
+
+    env:
+      XC_VERSION: ${{ '13.4.1' }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Select Xcode
+        run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
+
+      - name: Install Mint
+        run: brew install mint
+
+      - name: Install the dependencies
+        run: mint bootstrap
+
+      - name: Generate the Xcode Project
+        run: mint run xcodegen generate
+
+      - name: Run Unit and UI Tests
+        run: xcodebuild test -target idsapp -scheme idsapp -destination 'platform=iOS Simulator,name=iPhone 12'
