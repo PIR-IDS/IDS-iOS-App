@@ -43,10 +43,13 @@ jobs:
       - name: Build Unsigned Release XCArchive with xcodebuild
         run: xcodebuild ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -configuration Release -target idsapp -scheme idsapp -archivePath build/IDS-App.xcarchive archive
 
+      - name: Zip Unsigned Release XCArchive
+        run: cd build && zip -r IDS-App.xcarchive.zip IDS-App.xcarchive
+
       - name: Upload Unsigned Release XCArchive
         uses: softprops/action-gh-release@v1
         with:
-          files: build/IDS-App.xcarchive
+          files: build/IDS-App.xcarchive.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
