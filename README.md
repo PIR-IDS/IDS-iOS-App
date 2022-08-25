@@ -59,6 +59,10 @@
 
 This code will be used in order to receive the anomalies detected by the Arduino and to check if an event is linked to a distant action.
 
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/26198903/186628714-39a440dc-d113-4000-bc4f-f91ea50793e5.png" alt="Screenshot1" width="24%">
+</p>
+
 ### Built With
 * [Swift](https://www.swift.org/)
 * [SwiftUI](https://developer.apple.com/documentation/swiftui/)
