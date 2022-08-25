@@ -40,8 +40,8 @@
     <li>
       <a href="#usage">Usage</a>
       <ul>
-        <li><a href="#execution">Execution</a></li>
         <li><a href="#generation">Generation</a></li>
+        <li><a href="#execution">Execution</a></li>
         <li><a href="#tests">Tests</a></li>
         <li><a href="#documentation">Documentation</a></li>
       </ul>
@@ -99,27 +99,38 @@ This code will be used in order to receive the anomalies detected by the Arduino
 
 ### Generation
 
-To get the Debug `IDS App.app` file in the `build/Debug-iphoneos/` directory, use the following command:
+To get the Development Debug `IDS App.app` file in the `build/Debug-iphoneos/` directory, use the following command:
 ```sh
-xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Debug -target idsapp
+xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Debug -target idsapp -scheme idsapp
 ```
 
-To get the Release `IDS App.app` file in the `build/Release-iphoneos/` directory, use the following command:
+To get the Development Release `IDS App.app` file in the `build/Release-iphoneos/` directory, use the following command:
 ```sh
-xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Release -target idsapp
+xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Release -target idsapp -scheme idsapp
+```
+
+To get the Release Archive at the `build/IDS App.xcarchive` location (necessary to generate the IPA later with your own certificate), use the following command:
+```sh
+xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Release -target idsapp -scheme idsapp -archivePath "build/IDS App.xcarchive" archive
 ```
 
 ### Execution
 
-_TODO_
+Use Xcode or deploy the generated `.app` with the tool of your choice.
 
 ### Tests
 
-_TODO_
+To launch the unit tests and the UI tests, use the following command and replace `<destination>` with the destination platform of your choice:
+```sh
+xcodebuild test -target idsapp -scheme idsapp -destination <destination>
+```
 
 ### Documentation
 
-_TODO_
+To generate the `IDS App.docarchive` documentation file in the `build/Build/Products/Release-iphoneos` directory, use the following command:
+```sh
+xcodebuild ONLY_ACTIVE_ARCH=NO docbuild -configuration Release -target idsapp -scheme idsapp -derivedDataPath build
+```
 
 ***
 
