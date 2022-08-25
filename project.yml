@@ -42,7 +42,7 @@ targets:
         Debug:
           ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
           CODE_SIGN_STYLE: Automatic
-          CURRENT_PROJECT_VERSION: 1
+          CURRENT_PROJECT_VERSION: 2
           DEVELOPMENT_ASSET_PATHS: '"idsapp/res/Preview Content"'
           DEVELOPMENT_TEAM: ZVL8YHGVD6
           GENERATE_INFOPLIST_FILE: 'YES'
@@ -54,7 +54,7 @@ targets:
             UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft
             UIInterfaceOrientationLandscapeRight
           INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
-          MARKETING_VERSION: 0.1.0
+          MARKETING_VERSION: 0.2.0
           PRODUCT_BUNDLE_IDENTIFIER: fr.pirids.idsapp
           PRODUCT_NAME: IDS App
           SWIFT_EMIT_LOC_STRINGS: 'YES'
@@ -62,7 +62,7 @@ targets:
         Release:
           ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
           CODE_SIGN_STYLE: Automatic
-          CURRENT_PROJECT_VERSION: 1
+          CURRENT_PROJECT_VERSION: 2
           DEVELOPMENT_ASSET_PATHS: '"idsapp/res/Preview Content"'
           DEVELOPMENT_TEAM: ZVL8YHGVD6
           GENERATE_INFOPLIST_FILE: 'YES'
@@ -74,7 +74,7 @@ targets:
             UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft
             UIInterfaceOrientationLandscapeRight
           INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
-          MARKETING_VERSION: 0.1.0
+          MARKETING_VERSION: 0.2.0
           PRODUCT_BUNDLE_IDENTIFIER: fr.pirids.idsapp
           PRODUCT_NAME: IDS App
           SWIFT_EMIT_LOC_STRINGS: 'YES'
@@ -95,11 +95,11 @@ targets:
           ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: 'YES'
           BUNDLE_LOADER: $(TEST_HOST)
           CODE_SIGN_STYLE: Automatic
-          CURRENT_PROJECT_VERSION: 1
+          CURRENT_PROJECT_VERSION: 2
           DEVELOPMENT_TEAM: ZVL8YHGVD6
           GENERATE_INFOPLIST_FILE: 'YES'
           IPHONEOS_DEPLOYMENT_TARGET: '15.5'
-          MARKETING_VERSION: 0.1.0
+          MARKETING_VERSION: 0.2.0
           PRODUCT_BUNDLE_IDENTIFIER: fr.pirids.idsappTests
           SWIFT_EMIT_LOC_STRINGS: 'NO'
           SWIFT_VERSION: '5.0'
@@ -108,11 +108,11 @@ targets:
           ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: 'YES'
           BUNDLE_LOADER: $(TEST_HOST)
           CODE_SIGN_STYLE: Automatic
-          CURRENT_PROJECT_VERSION: 1
+          CURRENT_PROJECT_VERSION: 2
           DEVELOPMENT_TEAM: ZVL8YHGVD6
           GENERATE_INFOPLIST_FILE: 'YES'
           IPHONEOS_DEPLOYMENT_TARGET: '15.5'
-          MARKETING_VERSION: 0.1.0
+          MARKETING_VERSION: 0.2.0
           PRODUCT_BUNDLE_IDENTIFIER: fr.pirids.idsappTests
           SWIFT_EMIT_LOC_STRINGS: 'NO'
           SWIFT_VERSION: '5.0'
@@ -130,10 +130,10 @@ targets:
         Debug:
           ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: 'YES'
           CODE_SIGN_STYLE: Automatic
-          CURRENT_PROJECT_VERSION: 1
+          CURRENT_PROJECT_VERSION: 2
           DEVELOPMENT_TEAM: ZVL8YHGVD6
           GENERATE_INFOPLIST_FILE: 'YES'
-          MARKETING_VERSION: 0.1.0
+          MARKETING_VERSION: 0.2.0
           PRODUCT_BUNDLE_IDENTIFIER: fr.pirids.idsappUITests
           SWIFT_EMIT_LOC_STRINGS: 'NO'
           SWIFT_VERSION: '5.0'
@@ -141,10 +141,10 @@ targets:
         Release:
           ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: 'YES'
           CODE_SIGN_STYLE: Automatic
-          CURRENT_PROJECT_VERSION: 1
+          CURRENT_PROJECT_VERSION: 2
           DEVELOPMENT_TEAM: ZVL8YHGVD6
           GENERATE_INFOPLIST_FILE: 'YES'
-          MARKETING_VERSION: 0.1.0
+          MARKETING_VERSION: 0.2.0
           PRODUCT_BUNDLE_IDENTIFIER: fr.pirids.idsappUITests
           SWIFT_EMIT_LOC_STRINGS: 'NO'
           SWIFT_VERSION: '5.0'
