@@ -103,14 +103,14 @@ This code will be used in order to receive the anomalies detected by the Arduino
 
 ### Generation
 
-To get the Development Debug `IDS App.app` file in the `build/Debug-iphoneos/` directory, use the following command:
+To get the Development Debug `IDS App.app` file in the `build/Build/Products/Debug-iphoneos/` directory, use the following command:
 ```sh
-xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Debug -target idsapp -scheme idsapp
+xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Debug -target idsapp -scheme idsapp -derivedDataPath build
 ```
 
-To get the Development Release `IDS App.app` file in the `build/Release-iphoneos/` directory, use the following command:
+To get the Development Release `IDS App.app` file in the `build/Build/Products/Release-iphoneos/` directory, use the following command:
 ```sh
-xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Release -target idsapp -scheme idsapp
+xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Release -target idsapp -scheme idsapp -derivedDataPath build
 ```
 
 To get the Release Archive at the `build/IDS App.xcarchive` location (necessary to generate the IPA later with your own certificate), use the following command:
@@ -118,9 +118,30 @@ To get the Release Archive at the `build/IDS App.xcarchive` location (necessary 
 xcodebuild ONLY_ACTIVE_ARCH=NO -configuration Release -target idsapp -scheme idsapp -archivePath "build/IDS App.xcarchive" archive
 ```
 
+If you don't want to sign your builds, you can add the following environment variables: `CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO`
+
+To generate the IPA, first create your `ExportOptions.plist` file and fill it with the key-value pairs you want:
+```sh
+cp ExportOptions.plist.template ExportOptions.plist
+```
+
+Then use the following command to generate your IPA at this location `build/IDS App.ipa`. Keep in mind we will have to sign your IPA with an Apple Developer Certificate.
+```sh
+xcodebuild -exportArchive -archivePath "build/IDS App.xcarchive" -exportOptionsPlist ExportOptions.plist -exportPath build
+```
+
 ### Execution
 
-Use Xcode or deploy the generated `.app` with the tool of your choice.
+Use Xcode or deploy the generated `.app` with the tool of your choice, for example `cfgutil` from [Apple Configurator](https://support.apple.com/apple-configurator) or [ios-deploy](https://github.com/ios-control/ios-deploy).
+```sh
+cfgutil install-app "IDS App.app"
+# or
+cfgutil install-app "IDS App.ipa"
+# or
+ios-deploy --bundle "IDS App.app"
+# or
+ios-deploy --bundle "IDS App.ipa" --bundle_id fr.pirids.idsapp
+```
 
 ### Tests
 
@@ -131,7 +152,7 @@ xcodebuild test -target idsapp -scheme idsapp -destination <destination>
 
 ### Documentation
 
-To generate the `IDS App.docarchive` documentation file in the `build/Build/Products/Release-iphoneos` directory, use the following command:
+To generate the `IDS App.doccarchive` documentation file in the `build/Build/Products/Release-iphoneos` directory, use the following command:
 ```sh
 xcodebuild ONLY_ACTIVE_ARCH=NO docbuild -configuration Release -target idsapp -scheme idsapp -derivedDataPath build
 ```
